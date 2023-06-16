@@ -168,13 +168,20 @@
         var mapContainer = document.getElementById('jejumap'), // 지도를 표시할 div
             mapOption = {
                 center: new kakao.maps.LatLng(33.3524329, 126.522405), // 지도의 중심좌표
-                level: 3 // 지도의 확대 레벨
+                level: 10 // 지도의 확대 레벨
             };
 
         var map = new kakao.maps.Map(mapContainer, mapOption);
 
         setLocation(map, 33.3304701, 126.815540, '제주허브동산');
         setLocation(map, 33.2540961, 126.622356, '쇠소깍');
+        setLocation(map, 33.4584171, 126.942548, '성산일출봉');
+        setLocation(map, 33.4648680, 126.837284, '제주레일바이크');
+        setLocation(map, 33.4774929, 126.909376, '브라보비치 성산일출봉');
+        setLocation(map, 33.4718174, 126.915773, '오른');
+        setLocation(map, 33.4681216, 126.916981, '칠돈가 성산점');
+        setLocation(map, 33.4689892, 126.920068, '성산흑돼지 육성가');
+        setLocation(map, 33.5277584, 126.771714, '만장굴');
     }
 
     function setLocation(map, posX, posY, text) {
