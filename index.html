@@ -29,17 +29,33 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">제주도</a></li>
-                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#jejulocation">제주도 여행</a></li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">일정</a></li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#jejuList">여행지 목록</a></li>
+                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#jejulocation">제주여행 지도</a></li>
             </ul>
         </div>
     </div>
 </nav>
+<header class="masthead text-white text-center bg-primary">
+    <!--        <header class="masthead text-white text-center" style="background-image: url('image/YJ7_2133.jpg');background-size: cover; background-repeat: no-repeat;background-position: center;">-->
+    <div class="container d-flex align-items-center flex-column">
+        <!-- Masthead Avatar Image-->
+        <!--                <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..." />-->
+        <!-- Masthead Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-white">제주도</h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+    </div>
+</header>
 <!-- About Section-->
 <section class="page-section text-black mb-0" id="about">
     <div class="container">
         <!-- About Section Heading-->
-        <h2 class="page-section-heading text-center text-uppercase text-white">제주도</h2>
+        <h2 class="page-section-heading text-center text-uppercase text-black">일정</h2>
         <!-- Icon Divider-->
         <div class="divider-custom">
             <div class="divider-custom-line"></div>
@@ -63,11 +79,87 @@
         </div>-->
     </div>
 </section>
+
+<!-- About Section-->
+<section class="page-section text-black mb-0" id="jejuList">
+    <div class="container">
+        <!-- About Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-black">여행지 목록</h2>
+        <!-- Icon Divider-->
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- About Section Content-->
+        <div class="row">
+            <table class="table table-bordered table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">장소</th>
+                        <th scope="col">구분</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>혼인지</td>
+                        <td>수국</td>
+                    </tr>
+                    <tr>
+                        <td>제주허브동산</td>
+                        <td>허브</td>
+                    </tr>
+                    <tr>
+                        <td>쇠소깍</td>
+                        <td>카약, 해변</td>
+                    </tr>
+                    <tr>
+                        <td>성산일출봉</td>
+                        <td>봉우리, 등산</td>
+                    </tr>
+
+                    <tr>
+                        <td>제주레일바이크</td>
+                        <td>레일바이크</td>
+                    </tr>
+                    <tr>
+                        <td>브라보비치 성산일출봉</td>
+                        <td>카페</td>
+                    </tr>
+                    <tr>
+                        <td>오른</td>
+                        <td>카페</td>
+                    </tr>
+
+                    <tr>
+                        <td>칠돈가 성산점</td>
+                        <td>흑돼지구이</td>
+                    </tr>
+                    <tr>
+                        <td>성산흑돼지 육성가</td>
+                        <td>돼지고기</td>
+                    </tr>
+                    <tr>
+                        <td>만장굴</td>
+                        <td>동굴</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- About Section Button-->
+        <!--<div class="text-center mt-4">
+            <a class="btn btn-xl btn-outline-light" href="https://startbootstrap.com/theme/freelancer/">
+                <i class="fas fa-download me-2"></i>
+                Free Download!
+            </a>
+        </div>-->
+    </div>
+</section>
 <!-- jejulocation Section-->
 <section class="page-section" id="jejulocation">
     <div class="container">
         <!-- Portfolio Section Heading-->
-        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">제주도 지도</h2>
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">제주여행 지도</h2>
         <div class="divider-custom">
             <div class="divider-custom-line"></div>
             <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
@@ -173,6 +265,11 @@
 
         var map = new kakao.maps.Map(mapContainer, mapOption);
 
+        // 숙소
+        setLocation(map, 33.4739776, 126.910714, '17일 숙소 봄그리고가을');
+        setLocation(map, 33.4675794, 126.339047, '18일 숙소 씨스테이');
+
+        // 여행 예정지
         setLocation(map, 33.3304701, 126.815540, '제주허브동산');
         setLocation(map, 33.2540961, 126.622356, '쇠소깍');
         setLocation(map, 33.4584171, 126.942548, '성산일출봉');
