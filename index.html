@@ -65,7 +65,54 @@
         <!-- About Section Content-->
         <div class="row">
             <div class="col-lg-4 ms-auto">
-                <p class="lead"></p>
+                <table class="table table-bordered table-dark">
+                    <thead>
+                    <tr>
+                        <th scope="col" class="text-md-center">일자</th>
+                        <th scope="col" class="text-md-center">장소</th>
+                        <th scope="col" class="text-md-center">금액</th>
+                        <th scope="col" class="text-md-center">주소</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>11일</td>
+                        <td>제주레일바이크</td>
+                        <td>3만</td>
+                        <td>제주 제주시 구좌읍 용눈이오름로 641</td>
+                    </tr>
+                    <tr>
+                        <td>11일</td>
+                        <td>봄그리고가을</td>
+                        <td>숙소</td>
+                        <td>제주특별자치도 서귀포시 성산읍 해맞이해안로 2660</td>
+                    </tr>
+                    <tr>
+                        <td>12일</td>
+                        <td>쇠소깍</td>
+                        <td>2만</td>
+                        <td>제주 서귀포시 쇠소깍로 104</td>
+                    </tr>
+                    <tr>
+                        <td>12일</td>
+                        <td>테디베어뮤지엄</td>
+                        <td>2.5만</td>
+                        <td>제주특별자치도 서귀포시 특별자치도 중문관광로110번길 31</td>
+                    </tr>
+                    <tr>
+                        <td>12일</td>
+                        <td>씨스테이</td>
+                        <td>숙소</td>
+                        <td>제주특별자치도 제주시 애월읍 애월해안로 255</td>
+                    </tr>
+                    <tr>
+                        <td>13일</td>
+                        <td>사진놀이터</td>
+                        <td>2만</td>
+                        <td>제주 제주시 애월읍 평화로 2835 사진놀이터</td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
             <!--                    <-->
             <!--                    <div class="col-lg-4 me-auto"><p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p></div>-->
@@ -93,58 +140,6 @@
         </div>
         <!-- About Section Content-->
         <div class="row">
-            <table class="table table-bordered table-dark">
-                <thead>
-                    <tr>
-                        <th scope="col">장소</th>
-                        <th scope="col">구분</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>혼인지</td>
-                        <td>수국</td>
-                    </tr>
-                    <tr>
-                        <td>제주허브동산</td>
-                        <td>허브</td>
-                    </tr>
-                    <tr>
-                        <td>쇠소깍</td>
-                        <td>카약, 해변</td>
-                    </tr>
-                    <tr>
-                        <td>성산일출봉</td>
-                        <td>봉우리, 등산</td>
-                    </tr>
-
-                    <tr>
-                        <td>제주레일바이크</td>
-                        <td>레일바이크</td>
-                    </tr>
-                    <tr>
-                        <td>브라보비치 성산일출봉</td>
-                        <td>카페</td>
-                    </tr>
-                    <tr>
-                        <td>오른</td>
-                        <td>카페</td>
-                    </tr>
-
-                    <tr>
-                        <td>칠돈가 성산점</td>
-                        <td>흑돼지구이</td>
-                    </tr>
-                    <tr>
-                        <td>성산흑돼지 육성가</td>
-                        <td>돼지고기</td>
-                    </tr>
-                    <tr>
-                        <td>만장굴</td>
-                        <td>동굴</td>
-                    </tr>
-                </tbody>
-            </table>
         </div>
         <!-- About Section Button-->
         <!--<div class="text-center mt-4">
@@ -257,92 +252,92 @@
     // setTestLocation();
     // var overlay1,overlay2,overlay3
 
-    function setTestLocation() {
-        var mapContainer = document.getElementById('jejumap'), // 지도의 중심좌표
-            mapOption = {
-                center: new kakao.maps.LatLng(33.3524329, 126.522405), // 지도의 중심좌표
-                level: 10 // 지도의 확대 레벨
-            };
-
-        var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-
-
-        var marker1 = new kakao.maps.Marker({
-            map: map,
-            position: new kakao.maps.LatLng(33.4739776, 126.910714)
-        });
-
-        var content1 = '<div class="wrap">' +
-            '    <div class="info">' +
-            '        <div class="title">' +
-            '            카카오 스페이스닷원' +
-            '            <div class="close" onclick="closeOverlay()" title="닫기"></div>' +
-            '        </div>' +
-            '        <div class="body">' +
-            // '            <div class="img">' +
-            // '                <img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/thumnail.png" width="73" height="70">' +
-            // '           </div>' +
-            '            <div class="desc">' +
-            '                <div class="ellipsis">제주특별자치도 제주시 첨단로 242</div>' +
-            '                <div class="jibun ellipsis">(우) 63309 (지번) 영평동 2181</div>' +
-            '                <div><a href="https://www.kakaocorp.com/main" target="_blank" class="link">홈페이지</a></div>' +
-            '            </div>' +
-            '        </div>' +
-            '    </div>' +
-            '</div>';
-
-        // 마커 위에 커스텀오버레이를 표시합니다
-        // 마커를 중심으로 커스텀 오버레이를 표시하기위해 CSS를 이용해 위치를 설정했습니다
-        overlay1 = new kakao.maps.CustomOverlay({
-            content: content1,
-            map: map,
-            position: marker1.getPosition()
-        });
-
-        // 마커를 클릭했을 때 커스텀 오버레이를 표시합니다
-        kakao.maps.event.addListener(marker1, 'click', function() {
-            overlay1.setMap(map);
-        });
-
-
-        var marker2 = new kakao.maps.Marker({
-            map: map,
-            position: new kakao.maps.LatLng(33.4675794, 126.339047)
-        });
-
-        var content2 = '<div class="wrap">' +
-            '    <div class="info">' +
-            '        <div class="title">' +
-            '            카카오 스페이스닷원' +
-            '            <div class="close" onclick="closeOverlay(2)" title="닫기"></div>' +
-            '        </div>' +
-            '        <div class="body">' +
-            // '            <div class="img">' +
-            // '                <img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/thumnail.png" width="73" height="70">' +
-            // '           </div>' +
-            '            <div class="desc">' +
-            '                <div class="ellipsis">제주특별자치도 제주시 첨단로 242</div>' +
-            '                <div class="jibun ellipsis">(우) 63309 (지번) 영평동 2181</div>' +
-            '                <div><a href="https://www.kakaocorp.com/main" target="_blank" class="link">홈페이지</a></div>' +
-            '            </div>' +
-            '        </div>' +
-            '    </div>' +
-            '</div>';
-
-        // 마커 위에 커스텀오버레이를 표시합니다
-        // 마커를 중심으로 커스텀 오버레이를 표시하기위해 CSS를 이용해 위치를 설정했습니다
-        overlay2 = new kakao.maps.CustomOverlay({
-            content: content2,
-            map: map,
-            position: marker2.getPosition()
-        });
-
-        // 마커를 클릭했을 때 커스텀 오버레이를 표시합니다
-        kakao.maps.event.addListener(marker2, 'click', function() {
-            overlay2.setMap(map);
-        });
-
-    }
+    // function setTestLocation() {
+    //     var mapContainer = document.getElementById('jejumap'), // 지도의 중심좌표
+    //         mapOption = {
+    //             center: new kakao.maps.LatLng(33.3524329, 126.522405), // 지도의 중심좌표
+    //             level: 10 // 지도의 확대 레벨
+    //         };
+    //
+    //     var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+    //
+    //
+    //     var marker1 = new kakao.maps.Marker({
+    //         map: map,
+    //         position: new kakao.maps.LatLng(33.4739776, 126.910714)
+    //     });
+    //
+    //     var content1 = '<div class="wrap">' +
+    //         '    <div class="info">' +
+    //         '        <div class="title">' +
+    //         '            카카오 스페이스닷원' +
+    //         '            <div class="close" onclick="closeOverlay()" title="닫기"></div>' +
+    //         '        </div>' +
+    //         '        <div class="body">' +
+    //         // '            <div class="img">' +
+    //         // '                <img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/thumnail.png" width="73" height="70">' +
+    //         // '           </div>' +
+    //         '            <div class="desc">' +
+    //         '                <div class="ellipsis">제주특별자치도 제주시 첨단로 242</div>' +
+    //         '                <div class="jibun ellipsis">(우) 63309 (지번) 영평동 2181</div>' +
+    //         '                <div><a href="https://www.kakaocorp.com/main" target="_blank" class="link">홈페이지</a></div>' +
+    //         '            </div>' +
+    //         '        </div>' +
+    //         '    </div>' +
+    //         '</div>';
+    //
+    //     // 마커 위에 커스텀오버레이를 표시합니다
+    //     // 마커를 중심으로 커스텀 오버레이를 표시하기위해 CSS를 이용해 위치를 설정했습니다
+    //     overlay1 = new kakao.maps.CustomOverlay({
+    //         content: content1,
+    //         map: map,
+    //         position: marker1.getPosition()
+    //     });
+    //
+    //     // 마커를 클릭했을 때 커스텀 오버레이를 표시합니다
+    //     kakao.maps.event.addListener(marker1, 'click', function() {
+    //         overlay1.setMap(map);
+    //     });
+    //
+    //
+    //     var marker2 = new kakao.maps.Marker({
+    //         map: map,
+    //         position: new kakao.maps.LatLng(33.4675794, 126.339047)
+    //     });
+    //
+    //     var content2 = '<div class="wrap">' +
+    //         '    <div class="info">' +
+    //         '        <div class="title">' +
+    //         '            카카오 스페이스닷원' +
+    //         '            <div class="close" onclick="closeOverlay(2)" title="닫기"></div>' +
+    //         '        </div>' +
+    //         '        <div class="body">' +
+    //         // '            <div class="img">' +
+    //         // '                <img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/thumnail.png" width="73" height="70">' +
+    //         // '           </div>' +
+    //         '            <div class="desc">' +
+    //         '                <div class="ellipsis">제주특별자치도 제주시 첨단로 242</div>' +
+    //         '                <div class="jibun ellipsis">(우) 63309 (지번) 영평동 2181</div>' +
+    //         '                <div><a href="https://www.kakaocorp.com/main" target="_blank" class="link">홈페이지</a></div>' +
+    //         '            </div>' +
+    //         '        </div>' +
+    //         '    </div>' +
+    //         '</div>';
+    //
+    //     // 마커 위에 커스텀오버레이를 표시합니다
+    //     // 마커를 중심으로 커스텀 오버레이를 표시하기위해 CSS를 이용해 위치를 설정했습니다
+    //     overlay2 = new kakao.maps.CustomOverlay({
+    //         content: content2,
+    //         map: map,
+    //         position: marker2.getPosition()
+    //     });
+    //
+    //     // 마커를 클릭했을 때 커스텀 오버레이를 표시합니다
+    //     kakao.maps.event.addListener(marker2, 'click', function() {
+    //         overlay2.setMap(map);
+    //     });
+    //
+    // }
 
     // 커스텀 오버레이를 닫기 위해 호출되는 함수입니다
     // function closeOverlay() {
@@ -361,14 +356,14 @@
         var map = new kakao.maps.Map(mapContainer, mapOption);
 
         // 숙소
-        setLocation(map, 33.4739776, 126.910714, '11 숙소 봄그리고가을');
-        setLocation(map, 33.4675794, 126.339047, '12 숙소 씨스테이');
+        setLocation(map, 33.4739776, 126.910714, '11 봄그리고가을');
+        setLocation(map, 33.4675794, 126.339047, '12 씨스테이');
 
         // 여행 예정지
-        setLocation(map, 33.4648680, 126.837284, '11 제주레일바이크(3만)');
-        setLocation(map, 33.2499505, 126.412139, '12 테디베어뮤지엄(2.5만');
-        setLocation(map, 33.2540961, 126.622356, '12 쇠소깍(2만)');
-        setLocation(map, 33.4566716, 126.441743, '13 사진놀이터(2만)');
+        setLocation(map, 33.4648680, 126.837284, '11 제주레일바이크');
+        setLocation(map, 33.2499505, 126.412139, '12 테디베어뮤지엄');
+        setLocation(map, 33.2540961, 126.622356, '12 쇠소깍');
+        setLocation(map, 33.4566716, 126.441743, '13 사진놀이터');
     }
 
     function setLocation(map, posX, posY, text) {
