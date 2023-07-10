@@ -18,6 +18,39 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
 </head>
+<!--<style>-->
+<!--    .wrap {position: absolute;left: 0;bottom: 40px;width: 288px;height: 132px;margin-left: -144px;text-align: left;overflow: hidden;font-size: 12px;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;line-height: 1.5;}-->
+<!--    .wrap * {padding: 0;margin: 0;}-->
+<!--    .wrap .info {width: 286px;height: 120px;border-radius: 5px;border-bottom: 2px solid #ccc;border-right: 1px solid #ccc;overflow: hidden;background: #fff;}-->
+<!--    .wrap .info:nth-child(1) {border: 0;box-shadow: 0px 1px 2px #888;}-->
+<!--    .info .title {padding: 5px 0 0 10px;height: 30px;background: #eee;border-bottom: 1px solid #ddd;font-size: 18px;font-weight: bold;}-->
+<!--    .info .close {position: absolute;top: 10px;right: 10px;color: #888;width: 17px;height: 17px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png');}-->
+<!--    .info .close:hover {cursor: pointer;}-->
+<!--    .info .body {position: relative;overflow: hidden;}-->
+<!--    .info .desc {position: relative;margin: 13px 0 0 90px;height: 75px;}-->
+<!--    .desc .ellipsis {overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}-->
+<!--    .desc .jibun {font-size: 11px;color: #888;margin-top: -2px;}-->
+<!--    .info .img {position: absolute;top: 6px;left: 5px;width: 73px;height: 71px;border: 1px solid #ddd;color: #888;overflow: hidden;}-->
+<!--    .info:after {content: '';position: absolute;margin-left: -12px;left: 50%;bottom: 0;width: 22px;height: 12px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}-->
+<!--    .info .link {color: #5085BB;}-->
+<!--</style>-->
+<style>
+    .wrap {position: absolute;left: 0;bottom: -7px;width: 288px;height: 132px;margin-left: -144px;text-align: left;overflow: hidden;font-size: 12px;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;line-height: 1.5;}
+    .wrap * {padding: 0;margin: 0;}
+    .wrap .info {width: 286px;height: 75px;border-radius: 5px;border-bottom: 2px solid #ccc;border-right: 1px solid #ccc;overflow: hidden;background: #fff;}
+    .wrap .info:nth-child(1) {border: 0;box-shadow: 0px 1px 2px #888;}
+    .info .title {padding: 5px 0 0 10px;height: 30px;background: #eee;border-bottom: 1px solid #ddd;font-size: 18px;font-weight: bold;}
+    .info .close {position: absolute;top: 10px;right: 10px;color: #888;width: 17px;height: 17px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png');}
+    .info .close:hover {cursor: pointer;}
+    .info .body {position: relative;overflow: hidden;}
+    .info .desc {position: relative;margin: 10px 0 0 3px;height: 75px;}
+    /*.info .desc {position: relative;margin: 13px 0 0 90px;height: 75px;}*/
+    .desc .ellipsis {overflow: auto;white-space: nowrap;}
+    .desc .jibun {font-size: 11px;color: #888;margin-top: -2px;}
+    .info .img {position: absolute;top: 6px;left: 5px;width: 73px;height: 71px;border: 1px solid #ddd;color: #888;overflow: hidden;}
+    .info:after {content: '';position: absolute;margin-left: -12px;left: 50%;bottom: 45px;width: 22px;height: 12px;background: url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
+    .info .link {color: #5085BB;}
+</style>
 <body id="page-top">
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
@@ -64,56 +97,54 @@
         </div>
         <!-- About Section Content-->
         <div class="row">
-            <div class="col-lg-4 ms-auto">
-                <table class="table table-bordered table-dark">
-                    <thead>
-                    <tr>
-                        <th scope="col" class="text-md-center">일자</th>
-                        <th scope="col" class="text-md-center">장소</th>
-                        <th scope="col" class="text-md-center">금액</th>
-                        <th scope="col" class="text-md-center">주소</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>11일</td>
-                        <td>제주레일바이크</td>
-                        <td>3만</td>
-                        <td>제주 제주시 구좌읍 용눈이오름로 641</td>
-                    </tr>
-                    <tr>
-                        <td>11일</td>
-                        <td>봄그리고가을</td>
-                        <td>숙소</td>
-                        <td>제주특별자치도 서귀포시 성산읍 해맞이해안로 2660</td>
-                    </tr>
-                    <tr>
-                        <td>12일</td>
-                        <td>쇠소깍</td>
-                        <td>2만</td>
-                        <td>제주 서귀포시 쇠소깍로 104</td>
-                    </tr>
-                    <tr>
-                        <td>12일</td>
-                        <td>테디베어뮤지엄</td>
-                        <td>2.5만</td>
-                        <td>제주특별자치도 서귀포시 특별자치도 중문관광로110번길 31</td>
-                    </tr>
-                    <tr>
-                        <td>12일</td>
-                        <td>씨스테이</td>
-                        <td>숙소</td>
-                        <td>제주특별자치도 제주시 애월읍 애월해안로 255</td>
-                    </tr>
-                    <tr>
-                        <td>13일</td>
-                        <td>사진놀이터</td>
-                        <td>2만</td>
-                        <td>제주 제주시 애월읍 평화로 2835 사진놀이터</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
+            <table class="table table-bordered table-dark">
+                <thead>
+                <tr>
+                    <th scope="col" class="text-md-center">일자</th>
+                    <th scope="col" class="text-md-center">장소</th>
+                    <th scope="col" class="text-md-center">금액</th>
+                    <th scope="col" class="text-md-center">주소</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>11일</td>
+                    <td>제주레일바이크</td>
+                    <td>3만</td>
+                    <td>제주 제주시 구좌읍 용눈이오름로 641</td>
+                </tr>
+                <tr>
+                    <td>11일</td>
+                    <td>봄그리고가을</td>
+                    <td>숙소</td>
+                    <td>제주특별자치도 서귀포시 성산읍 해맞이해안로 2660</td>
+                </tr>
+                <tr>
+                    <td>12일</td>
+                    <td>쇠소깍</td>
+                    <td>2만</td>
+                    <td>제주 서귀포시 쇠소깍로 104</td>
+                </tr>
+                <tr>
+                    <td>12일</td>
+                    <td>테디베어뮤지엄</td>
+                    <td>2.5만</td>
+                    <td>제주특별자치도 서귀포시 특별자치도 중문관광로110번길 31</td>
+                </tr>
+                <tr>
+                    <td>12일</td>
+                    <td>씨스테이</td>
+                    <td>숙소</td>
+                    <td>제주특별자치도 제주시 애월읍 애월해안로 255</td>
+                </tr>
+                <tr>
+                    <td>13일</td>
+                    <td>사진놀이터</td>
+                    <td>2만</td>
+                    <td>제주 제주시 애월읍 평화로 2835 사진놀이터</td>
+                </tr>
+                </tbody>
+            </table>
             <!--                    <-->
             <!--                    <div class="col-lg-4 me-auto"><p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p></div>-->
         </div>
@@ -248,103 +279,123 @@
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=76f2886a9e54957eeaf871b1adc2b6d8"></script>
 <script type="text/javascript">
     // 33.3524329, 126.522405
+    var overlayArry = [];
 
-    // setTestLocation();
-    // var overlay1,overlay2,overlay3
+    setTestLocation();
 
-    // function setTestLocation() {
-    //     var mapContainer = document.getElementById('jejumap'), // 지도의 중심좌표
-    //         mapOption = {
-    //             center: new kakao.maps.LatLng(33.3524329, 126.522405), // 지도의 중심좌표
-    //             level: 10 // 지도의 확대 레벨
-    //         };
-    //
-    //     var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-    //
-    //
-    //     var marker1 = new kakao.maps.Marker({
-    //         map: map,
-    //         position: new kakao.maps.LatLng(33.4739776, 126.910714)
-    //     });
-    //
-    //     var content1 = '<div class="wrap">' +
-    //         '    <div class="info">' +
-    //         '        <div class="title">' +
-    //         '            카카오 스페이스닷원' +
-    //         '            <div class="close" onclick="closeOverlay()" title="닫기"></div>' +
-    //         '        </div>' +
-    //         '        <div class="body">' +
-    //         // '            <div class="img">' +
-    //         // '                <img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/thumnail.png" width="73" height="70">' +
-    //         // '           </div>' +
-    //         '            <div class="desc">' +
-    //         '                <div class="ellipsis">제주특별자치도 제주시 첨단로 242</div>' +
-    //         '                <div class="jibun ellipsis">(우) 63309 (지번) 영평동 2181</div>' +
-    //         '                <div><a href="https://www.kakaocorp.com/main" target="_blank" class="link">홈페이지</a></div>' +
-    //         '            </div>' +
-    //         '        </div>' +
-    //         '    </div>' +
-    //         '</div>';
-    //
-    //     // 마커 위에 커스텀오버레이를 표시합니다
-    //     // 마커를 중심으로 커스텀 오버레이를 표시하기위해 CSS를 이용해 위치를 설정했습니다
-    //     overlay1 = new kakao.maps.CustomOverlay({
-    //         content: content1,
-    //         map: map,
-    //         position: marker1.getPosition()
-    //     });
-    //
-    //     // 마커를 클릭했을 때 커스텀 오버레이를 표시합니다
-    //     kakao.maps.event.addListener(marker1, 'click', function() {
-    //         overlay1.setMap(map);
-    //     });
-    //
-    //
-    //     var marker2 = new kakao.maps.Marker({
-    //         map: map,
-    //         position: new kakao.maps.LatLng(33.4675794, 126.339047)
-    //     });
-    //
-    //     var content2 = '<div class="wrap">' +
-    //         '    <div class="info">' +
-    //         '        <div class="title">' +
-    //         '            카카오 스페이스닷원' +
-    //         '            <div class="close" onclick="closeOverlay(2)" title="닫기"></div>' +
-    //         '        </div>' +
-    //         '        <div class="body">' +
-    //         // '            <div class="img">' +
-    //         // '                <img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/thumnail.png" width="73" height="70">' +
-    //         // '           </div>' +
-    //         '            <div class="desc">' +
-    //         '                <div class="ellipsis">제주특별자치도 제주시 첨단로 242</div>' +
-    //         '                <div class="jibun ellipsis">(우) 63309 (지번) 영평동 2181</div>' +
-    //         '                <div><a href="https://www.kakaocorp.com/main" target="_blank" class="link">홈페이지</a></div>' +
-    //         '            </div>' +
-    //         '        </div>' +
-    //         '    </div>' +
-    //         '</div>';
-    //
-    //     // 마커 위에 커스텀오버레이를 표시합니다
-    //     // 마커를 중심으로 커스텀 오버레이를 표시하기위해 CSS를 이용해 위치를 설정했습니다
-    //     overlay2 = new kakao.maps.CustomOverlay({
-    //         content: content2,
-    //         map: map,
-    //         position: marker2.getPosition()
-    //     });
-    //
-    //     // 마커를 클릭했을 때 커스텀 오버레이를 표시합니다
-    //     kakao.maps.event.addListener(marker2, 'click', function() {
-    //         overlay2.setMap(map);
-    //     });
-    //
-    // }
+    function setTestLocation() {
+        var mapContainer = document.getElementById('jejumap'), // 지도의 중심좌표
+            mapOption = {
+                center: new kakao.maps.LatLng(33.3524329, 126.522405), // 지도의 중심좌표
+                level: 10 // 지도의 확대 레벨
+            };
+
+        var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+        // 숙소
+        setFnLocation(
+            map
+            , 33.4739776
+            , 126.910714
+            , '봄그리고가을'
+            , '제주특별자치도 서귀포시 성산읍 해맞이해안로 2660'
+            , ''
+        );
+
+        setFnLocation(
+            map
+            , 33.4675794
+            , 126.339047
+            , '씨스테이'
+            , '제주특별자치도 제주시 애월읍 애월해안로 255'
+            , ''
+        );
+
+        setFnLocation(
+            map
+            , 33.4648680
+            , 126.837284
+            , '제주레일바이크'
+            , '제주 제주시 구좌읍 용눈이오름로 641'
+            , ''
+        );
+
+        setFnLocation(
+            map
+            , 33.2499505
+            , 126.412139
+            , '테디베어뮤지엄'
+            , '제주 제주시 구좌읍 용눈이오름로 641'
+            , ''
+        );
+
+        setFnLocation(
+            map
+            , 33.2540961
+            , 126.622356
+            , '쇠소깍'
+            , '제주 서귀포시 쇠소깍로 104'
+            , ''
+        );
+
+        setFnLocation(
+            map
+            , 33.4566716
+            , 126.441743
+            , '사진놀이터'
+            , '제주 제주시 애월읍 평화로 2835 사진놀이터'
+            , ''
+        );
+    }
+
+    function setFnLocation(map, posX, posY, text, juso, link ) {
+        var index = typeof overlayArry == 'undefined' ? 0 : overlayArry.length;
+        console.log(index)
+
+        var marker = new kakao.maps.Marker({
+            map: map,
+            position: new kakao.maps.LatLng(posX, posY)
+        });
+
+        var content =
+            '<div class="wrap">\n' +
+                '<div class="info">\n' +
+                    '<div class="title">\n' + text +
+                        '<div class="close" onclick="closeOverlay(' + index + ');" title="닫기"></div>\n' +
+                    '</div>\n' +
+                    '<div class="body">\n' +
+                        '<div class="desc">\n' +
+                        '<div class="ellipsis">' + juso + '</div>\n'
+                        // '<div class="jibun ellipsis">(우) 63309 (지번) 영평동 2181</div>\n' +
+                        link == '' ? '' : '<div><a href="' + link + '" target="_blank" class="link">홈페이지</a></div>\n'
+                    '</div>\n' +
+                '</div>\n' +
+                '</div>' +
+            '</div>';
+
+        // 마커 위에 커스텀오버레이를 표시합니다
+        // 마커를 중심으로 커스텀 오버레이를 표시하기위해 CSS를 이용해 위치를 설정했습니다
+        overlay = new kakao.maps.CustomOverlay({
+            content: content,
+            map: map,
+            position: marker.getPosition()
+        });
+
+        // 마커를 클릭했을 때 커스텀 오버레이를 표시합니다
+        kakao.maps.event.addListener(marker, 'click', function() {
+            overlayArry[index].setMap(map);
+        });
+
+        overlayArry.push(overlay);
+    }
 
     // 커스텀 오버레이를 닫기 위해 호출되는 함수입니다
-    // function closeOverlay() {
-    //     overlay1.setMap(null);
-    // }
+    function closeOverlay(index) {
+        overlayArry[index].setMap(null);
+    }
 
-    setListLocation();
+/* 기본 표시
+    // setListLocation();
 
     function setListLocation() {
         var mapContainer = document.getElementById('jejumap'), // 지도를 표시할 div
@@ -416,5 +467,6 @@
     //     marker2.setMap(map);
     //     marker3.setMap(map);
     // }
+*/
 
 </script>
